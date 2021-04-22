@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{
+  margin: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+    body {
+      height: 100vh;
+      width: 100%;
+      background-color:linen;
+      display: inline-block;
+      place-items: center;
+      text-align: center;
+      }
+      .generate {
+        border: solid 3px brown;
+        border-radius: 5px;
+      
+      }
+      h1 {
+        color: saddlebrown;
+      }
+      .quote, .author{
+        color: orangered;
+      }
+    
+    
+    
+    </style>
+
+  
+</head>
+
+<body> 
+<div class = "container">
+<h1>Quotes</h1>
+<button class = "generate">New Quote!</button>
+<div class = "main">
+<p class = "quote"></p>
+<span class = "author"></span>
+</div>
+</div>
+<script>
+  let quotes = [
+    {
+      quote: "Nu-mi place de acel om. Trebuie sa-l cunosc mai bine.",
+      author: "Abraham Lincoln"
+    },
+    {
+      quote: "Nimeni nu poate trai fara prieteni, chiar daca stapaneste toate bunurile lumii.",
+      author: "Aristotel"
+    },
+    {
+      quote: "Imposibilul poate fi impartit oricand in posibilitati",
+      author: "Necunoscut"
+    },
+    {
+      quote: "Acolo unde este dragoste, este viata.",
+      author: "Mahatma Gandhi"
+    },
+    {
+      quote: "Intotdeauna intre oamenii inteligenti exista un limbaj comun",
+      author: "Alexandru Paleologu"
+    },
+    {
+      quote: "Fericirea este sanatatea sufletului",
+      author: "Natalia Paun"
+    }
+  ];
+  
+const btn = document.querySelector(".generate");
+btn.addEventListener('click', () => {
+let random = Math.floor(Math.random() * quotes.length);
+document.querySelector('.quote').innerText = quotes[random].quote;
+document.querySelector('.author').innerText = quotes[random].author;
+
+});
+  
+  
+  </script>
+</body>
+
+</html>
